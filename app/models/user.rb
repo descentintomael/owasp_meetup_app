@@ -40,7 +40,7 @@ class User < ActiveRecord::Base
   end
 
   def home_path
-    self[:home_path] || self
+    eval(self[:home_path]) || self
   end
 
   private
