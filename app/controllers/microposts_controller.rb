@@ -18,6 +18,10 @@ class MicropostsController < ApplicationController
     redirect_to root_url
   end
 
+  def fetch_file
+    send_file "public/docs/#{params[:id]}.pdf"
+  end
+
   private
 
     def micropost_params
